@@ -23,7 +23,12 @@ namespace VehicleInspection
 
         public override string DisplayInfo()
         {
-            return $"Car: Brand={Brand}, Model={Model}";
+            return $"Car: {Brand} {Model}";
+        }
+
+        public override void SetTireType(bool isWinterTire)
+        {
+            MaxRimSize = isWinterTire ? 16 : 22;
         }
     }
 }
